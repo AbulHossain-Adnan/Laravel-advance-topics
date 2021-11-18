@@ -1,0 +1,5 @@
+Topic:Queue description:
+------------------------
+Sometime in laravel we perform some sort of actions that take much time,that is not good  user experience
+but here is laravel have good solution that is laravel queue.it will help you to process your job in background
+so you don't need to wait for complete that action.
