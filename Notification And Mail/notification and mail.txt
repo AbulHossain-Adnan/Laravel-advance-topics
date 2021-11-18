@@ -1,0 +1,17 @@
+1:Topic:Notification and Mail,
+------------------------------
+description:
+------------
+Allmost all application need some sort of communication with there client while they are 
+offline or giving instruction to perform some kind of actions or varify they are data etc.
+
+Laravel have to component 1.mail, 2.notification one for sending an email and another for sending 
+genaric notification.Its support communication vaiya smtp,amazon ses, mailgun and several other thirt party providers.
+
+Why there is two component for:
+-------------------------------
+simple ans there is to component mail and notification .when you need just send an email then you can use mail .
+
+when you need to notify user vaiya sevaral channel that time you go for notification .it support mail.slak,teligram and other etc.
+
+
