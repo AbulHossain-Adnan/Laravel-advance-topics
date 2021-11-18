@@ -1,0 +1,52 @@
+Queue Inplement:
+----------------
+where is queue in laravel ,its depends on which driver you use.now we are going to use simple database driver
+ from app/config/queue.php.
+
+
+first_step:
+-----------
+
+Database:
+
+In order to use the database queue driver, you will need a database table to hold the jobs. To generate a migration that creates this table, run the queue:table Artisan command. Once the migration has been created, you may migrate your database using the migrate command:
+
+php artisan queue:table
+-----------------------------
+
+php artisan migrate
+-----------------------------
+
+Finally, don't forget to instruct your application to use the database driver by updating the QUEUE_CONNECTION variable in your application's .env file:
+
+QUEUE_CONNECTION=database
+
+
+
+
+-----------
+1:we can use database driver in env file  QUEUE_CONNECTION=database
+
+or we can simple use in queue.php like bellow,
+ 'default' => env('QUEUE_CONNECTION', 'database'),
+
+
+
+Second Step:
+------------
+Change the notification class
+
+
+
+use this above in notification class,
+----------------------------------------------
+   use Illuminate\Contracts\Queue\ShouldQueue;
+------------------------------------------------
+use this implements ShouldQueue like this. (class UserApprovalnotification extends Notification implements ShouldQueue)
+
+yea very simple ,thats it.
+
+
+
+
+
